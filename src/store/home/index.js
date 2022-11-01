@@ -5,9 +5,16 @@ import Vue from "vue";
 Vue.use(Vuex);
 
 //state:仓库存储数据的地方
-const state = {};
+const state = {
+    categoryList:[],
+
+};
 //mutations:修改state的唯一手段
-const mutations = {};
+const mutations = {
+    CATEGORYLIST(state,categoryList) {
+        state.categoryList = categoryList;
+    }
+};
 //action:处理action
 const actions = {
     //通过API里的接口函数调用
