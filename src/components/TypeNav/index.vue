@@ -1,6 +1,5 @@
 <template>
   <div class="type-nav">
-    <h1>{{categoryList}}</h1>
     <div class="container">
       <h2 class="all">全部商品分类</h2>
       <nav class="nav">
@@ -1705,11 +1704,9 @@ export default {
     ...mapState({
       //右侧需要的是一个函数，当使用这个计算属性的时候，右侧函数会立即执行一次
       //注入一个参数state，其实即为大仓库中的数据
-      categoryList:(state)=>{
-        console.log(state);
-      }
-    })
-  }
+      categoryList:state=>state.home.categoryList
+    }),
+  },
 };
 </script>
 
