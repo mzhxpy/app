@@ -1,4 +1,5 @@
 //home模块小仓库
+import {reqCategoryList} from "@/api";
 import Vuex from "vuex";
 import Vue from "vue";
 Vue.use(Vuex);
@@ -8,7 +9,15 @@ const state = {};
 //mutations:修改state的唯一手段
 const mutations = {};
 //action:处理action
-const actions = {};
+const actions = {
+    //通过API里的接口函数调用
+    async categoryList({commit}) {
+        let result = await reqCategoryList();
+        if (result.code===200) {
+            commit("CATEGORYLIST", result.data);
+        }
+    }
+};
 //getters:理解为计算属性
 const getters = {};
 

@@ -1696,7 +1696,7 @@ export default {
   name: 'TypeNav',
   //组件挂载完毕，可以向服务器发送请求
   mounted() {
-    //通知Vuex发请求，获取数据，存储与仓库当中
+    //通知Vuex发请求，获取数据    ，存储与仓库当中
     this.$store.dispatch('categoryList')
   }
 }
